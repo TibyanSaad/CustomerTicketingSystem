@@ -16,23 +16,23 @@ public class CustomerTicketingSystem1 {
             int option = Integer.parseInt(customerInput.nextLine());
 
             if (option == 1){
-                System.out.println("Would you like to submit a ticket? type 'YES'");
-                System.out.println("Type 'EXIT' if you want to exit");
+                System.out.println("1.Create Ticket");
+                System.out.println("2.Back to Main Menu");
                 String customerOption = customerInput.nextLine();
-                if (customerOption.equals("EXIT")){
-                    exit(0);
-                }else if (customerOption.equals("YES")){
-                System.out.println("1.Ticket number");
-                System.out.println("2.Type your feedback");
-                System.out.println("3.Priority (HIGH, MEDIUM, LOW)");
-                    System.out.println("#################################");
-                    System.out.print("1.");
-                customerFeedback.add(customerInput.nextLine());
-                    System.out.print("2.");
-                customerFeedback.add(customerInput.nextLine());
-                    System.out.print("3.");
-                customerFeedback.add(customerInput.nextLine());
-                System.out.println("Ticket created successfully");
+                    if (customerOption.equals("2")){
+                        System.out.println("1.Ticket number");
+                        System.out.println("2.Type your feedback");
+                        System.out.println("3.Priority (HIGH, MEDIUM, LOW)");
+                        System.out.println("#################################");
+                        System.out.print("1.");
+                        customerFeedback.add(customerInput.nextLine());
+                        System.out.print("2.");
+                        customerFeedback.add(customerInput.nextLine());
+                        System.out.print("3.");
+                        customerFeedback.add(customerInput.nextLine());
+                        System.out.println("Ticket created successfully");
+                        }else if (customerOption.equals("1")){
+                        exit(0);
                 }System.out.println("Invalid option.");
             }
 
