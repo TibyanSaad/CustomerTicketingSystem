@@ -23,10 +23,9 @@ public class CustomerTicketingSystem1 {
             customerPage(customerInput);
         } else if (option == 2) {
             adminPage(customerInput);
-        }
-        else if (option == 3){
-               System.exit(0);
-        }else {
+        } else if (option == 3) {
+            System.exit(0);
+        } else {
             System.out.println("Select a valid option.");
         }
         return 0;
@@ -78,8 +77,7 @@ public class CustomerTicketingSystem1 {
                     int ticketID = Integer.parseInt(customerInput.nextLine());
 
                     for (Ticket adminTicketId : customerTicket) {
-                        if (adminTicketId.getTicketNo() == ticketID)
-                        {
+                        if (adminTicketId.getTicketNo() == ticketID) {
                             System.out.println("Ticket Number: " + adminTicketId.getTicketNo());
                             System.out.println("Description: " + adminTicketId.getfeedback());
                             System.out.println("Priority: " + adminTicketId.getPriority());
@@ -93,37 +91,39 @@ public class CustomerTicketingSystem1 {
                     boolean found = false;
                     int ticketID = Integer.parseInt(customerInput.nextLine());
                     for (Ticket adminTicketId : customerTicket) {
-                        if (adminTicketId.getTicketNo() == ticketID)
-                        {
+                        if (adminTicketId.getTicketNo() == ticketID) {
                             System.out.println("Ticket Number: " + adminTicketId.getTicketNo());
                             System.out.println("Description: " + adminTicketId.getfeedback());
                             System.out.println("Priority: " + adminTicketId.getPriority());
                         }
-                    }System.out.println("#######################");
+                    }
+                    System.out.println("#######################");
                     System.out.println("Update the ticket:");
                     for (Ticket adminTicketId : customerTicket) {
-                        if (adminTicketId.getTicketNo() == ticketID)
-                        {
+                        if (adminTicketId.getTicketNo() == ticketID) {
                             System.out.print("Ticket Number: ");
                             ticketID = Integer.parseInt(customerInput.nextLine());
                             adminTicketId.setTicketNo(ticketID);
-                            System.out.println(adminTicketId.getTicketNo());
-
-                            System.out.println("Description: ");
+                            System.out.print("Description: ");
                             String feedback = customerInput.nextLine();
                             adminTicketId.setfeedback(feedback);
-                            System.out.println(adminTicketId.getfeedback());
-
                             System.out.print("Priority: ");
                             String priority = customerInput.nextLine();
                             adminTicketId.setPriority(priority);
-                            System.out.println(adminTicketId.getPriority());
+
+                            System.out.println("#######################");
+                            System.out.println("Updated ticket:");
+                            System.out.println("Ticket ID: " + adminTicketId.getTicketNo());
+                            System.out.println("Description: " + adminTicketId.getfeedback());
+                            System.out.println("Priority: " + adminTicketId.getPriority());
+
                         }
                     }
 
 
                     if (!found) {
-                        System.out.println("Ticket does not exist");}
+                        System.out.println("Ticket does not exist");
+                    }
 
                 } else if (adminOption == 3) {
                     mainMenu(customerInput);
