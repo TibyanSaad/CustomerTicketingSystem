@@ -1,14 +1,13 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static java.lang.System.exit;
 
-public class CustomerTicketingSystem1 {
+public class DynamicCustomerTicketingSystem {
     static ArrayList<Ticket> customerTicket = new ArrayList<>();
 
     public static void main(String[] args) {
         Scanner customerInput = new Scanner(System.in);
-        boolean mainMenuOn = true;
+        boolean found = true;
         int option = 0;
         while (option != 3) {
             option = mainMenu(customerInput);
@@ -79,7 +78,7 @@ public class CustomerTicketingSystem1 {
                     for (Ticket adminTicketId : customerTicket) {
                         if (adminTicketId.getTicketNo() == ticketID) {
                             System.out.println("Ticket Number: " + adminTicketId.getTicketNo());
-                            System.out.println("Description: " + adminTicketId.getfeedback());
+                            System.out.println("Description: " + adminTicketId.getFeedback());
                             System.out.println("Priority: " + adminTicketId.getPriority());
                         }
                     }
@@ -93,7 +92,7 @@ public class CustomerTicketingSystem1 {
                     for (Ticket adminTicketId : customerTicket) {
                         if (adminTicketId.getTicketNo() == ticketID) {
                             System.out.println("Ticket Number: " + adminTicketId.getTicketNo());
-                            System.out.println("Description: " + adminTicketId.getfeedback());
+                            System.out.println("Description: " + adminTicketId.getFeedback());
                             System.out.println("Priority: " + adminTicketId.getPriority());
                         }
                     }
@@ -106,7 +105,7 @@ public class CustomerTicketingSystem1 {
                             adminTicketId.setTicketNo(ticketID);
                             System.out.print("Description: ");
                             String feedback = customerInput.nextLine();
-                            adminTicketId.setfeedback(feedback);
+                            adminTicketId.setFeedback(feedback);
                             System.out.print("Priority: ");
                             String priority = customerInput.nextLine();
                             adminTicketId.setPriority(priority);
@@ -114,7 +113,7 @@ public class CustomerTicketingSystem1 {
                             System.out.println("#######################");
                             System.out.println("Updated ticket:");
                             System.out.println("Ticket ID: " + adminTicketId.getTicketNo());
-                            System.out.println("Description: " + adminTicketId.getfeedback());
+                            System.out.println("Description: " + adminTicketId.getFeedback());
                             System.out.println("Priority: " + adminTicketId.getPriority());
 
                         }

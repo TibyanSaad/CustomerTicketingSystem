@@ -11,7 +11,7 @@ public class Ticket {
     public int getTicketNo(){
         return ticketNo;
     }
-    public String getfeedback(){
+    public String getFeedback(){
         return feedback;
     }
     public String getPriority(){
@@ -20,7 +20,7 @@ public class Ticket {
     public void setTicketNo(int ticketNo) {
         this.ticketNo = ticketNo;
     }
-    public void setfeedback(String feedback) {
+    public void setFeedback(String feedback) {
         this.feedback=feedback;
     }
     public void setPriority(String priority) {
